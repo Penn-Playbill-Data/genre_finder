@@ -66,21 +66,10 @@ def run_genre_finder(directory):
     return genre_dict
 
 
-# def print_genre_dict(genre_dict):
-#     for i in genre_dict:
-#         print(i + ": ")
-#         for j in range(len(genre_dict[i])):
-#             genres = genre_dict[i]
-#             print(
-#                "\t" + str(j + 1) + ". " + genres[j][0] + ": " + genres[j][1])
-#     return
-
-
 def main():
     directory = input("Genre Finder: Please input the folder path: ")
     directory = os.path.expanduser(directory)
     genre_dict = run_genre_finder(directory)
-    # print_genre_dict(genre_dict)
     master = genre_csv_list(genre_dict)
     run_genre_csv(master, directory)
 
